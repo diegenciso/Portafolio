@@ -1,0 +1,29 @@
+---
+import { Code, Debug } from "astro:components"
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+    {
+        title: 'Desarollo web - CasaDeco',
+        description: 'Pagina web para un catálogo de productos de la empresa Casadeco. (www.casadeco.com.py)',
+        
+    },
+    {
+        title: 'Invitaciones web - La Emperatriz',
+        description: 'Invitaciones digitales para casamientos, quinceaños, u otros eventos. Hechas con HTML, CSS y JavaScript.'
+    }
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">      
+    {
+        EXPERIENCE.map((experience) => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience}/>
+            </li>
+        ))
+    }            
+    
+</ol>
+
+
