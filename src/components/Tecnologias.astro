@@ -1,0 +1,76 @@
+---
+import ReactIcon from '../components/icons/ReactIcon.astro'
+import TailwindIcon from '../components/icons/TailwindIcon.astro'
+import StyledComponentsIcon from '../components/icons/StyledComponentsIcon.astro'
+import CssIcon from '../components/icons/CssIcon.astro'
+import JavascriptIcon from '../components/icons/JavascriptIcon.astro'
+import AstroIcon from '../components/icons/AstroIcon.astro'
+import NextIcon from '../components/icons/NextIcon.astro'
+import CIcon from '../components/icons/CIcon.astro'
+
+const TAGS = {
+    REACT: {
+        name: 'React JS',
+        class: 'bg-sky-700 text-white',
+        icon: ReactIcon
+    },
+    TAILWIND: {
+        name: 'Tailwind CSS',
+        class: 'bg-[#003159] text-white',
+        icon: TailwindIcon
+    },
+    STYLED: {
+        name: 'Styled Components',
+        class: 'bg-red-900 text-white',
+        icon: StyledComponentsIcon
+    },
+    CSS: {
+        name: 'CSS',
+        class: 'bg-[#003159] text-white',
+        icon: CssIcon
+    },
+    JAVASCRIPT: {
+        name: 'JavaScript',
+        class: 'bg-[#323330] text-white',
+        icon: JavascriptIcon
+    },
+    ASTRO: {
+        name: 'Astro',
+        class: 'bg-[#6734eb] text-white',
+        icon: AstroIcon
+    },
+    NEXT: {
+        name: 'Next JS',
+        class: 'bg-[#323330] text-white',
+        icon: NextIcon
+    },
+    C: {
+        name: 'C',
+        class: 'bg-[#4a5aed] text-white',
+        icon: CIcon
+    }
+}
+
+const TECH = [TAGS.REACT, TAGS.TAILWIND, TAGS.STYLED, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.ASTRO, TAGS.NEXT, TAGS.C]
+    
+
+---
+
+
+
+{
+<ul class="flex gap-x-2 flex-row mb-2">
+    {
+        TECH.map(tag => (
+            <li>
+            <span class={`flex gap-x-2 rounded-full text-base  ${tag.class} py-1 px-3 pb-1`}>
+                
+            <tag.icon class="size-5" />
+            {tag.name}
+            </li>
+            </span>
+        ))
+    }
+</ul>
+
+}

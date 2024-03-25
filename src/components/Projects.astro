@@ -1,6 +1,12 @@
 ---
 import ReactIcon from '../components/icons/ReactIcon.astro'
 import TailwindIcon from '../components/icons/TailwindIcon.astro'
+import StyledComponentsIcon from '../components/icons/StyledComponentsIcon.astro'
+import CssIcon from '../components/icons/CssIcon.astro'
+import JavascriptIcon from '../components/icons/JavascriptIcon.astro'
+import AstroIcon from '../components/icons/AstroIcon.astro'
+import NextIcon from '../components/icons/NextIcon.astro'
+import CIcon from '../components/icons/CIcon.astro'
 const TAGS = {
     REACT: {
         name: 'React JS',
@@ -11,34 +17,88 @@ const TAGS = {
         name: 'Tailwind CSS',
         class: 'bg-[#003159] text-white',
         icon: TailwindIcon
+    },
+    STYLED: {
+        name: 'Styled Components',
+        class: 'bg-red-900 text-white',
+        icon: StyledComponentsIcon
+    },
+    CSS: {
+        name: 'CSS',
+        class: 'bg-[#003159] text-white',
+        icon: CssIcon
+    },
+    JAVASCRIPT: {
+        name: 'JavaScript',
+        class: 'bg-[#323330] text-white',
+        icon: JavascriptIcon
+    },
+    ASTRO: {
+        name: 'Astro',
+        class: 'bg-[#6734eb] text-white',
+        icon: AstroIcon
+    },
+    NEXT: {
+        name: 'Next JS',
+        class: 'bg-[#323330] text-white',
+        icon: NextIcon
+    },
+    C: {
+        name: 'C',
+        class: 'bg-[#4a5aed] text-white',
+        icon: CIcon
     }
+
 }
 
 const PROJECTS = [
-    {   image: '/projects/crm-screen.webp',
-        title: 'CRM - Administrador de Clientes',
+    {   image: '/projects/presupuesto-screen.webp',
+        title: 'Control de Presupuesto',
+        tags: [TAGS.REACT, TAGS.CSS],
+        description: 'Proyecto hecho en React y estilizado con TailwindCSS sobre un simulador para un sistema de administracion de clientes, con opciones de eliminar, editar y añadir nuevos clientes por medio de un formulario.',
+        link: 'https://famous-eclair-006468.netlify.app',
+        github: '#',
+    },
+    {
+        image: '/projects/cotizador-screen.webp',
+        title: 'Cotizador De Criptomonedas con API',
+        tags: [TAGS.REACT, TAGS.STYLED],
+        description: 'Proyecto hecho en React y estilizado con TailwindCSS sobre un simulador para un sistema de administracion de clientes, con opciones de eliminar, editar y añadir nuevos clientes por medio de un formulario.',
+        link: "https://admirable-granita-1aece2.netlify.app",
+        github: '#',
+    },
+    {
+        image: '/projects/citas-screen.webp',
+        title: 'Administrador de citas de clientes',
         tags: [TAGS.REACT, TAGS.TAILWIND],
         description: 'Proyecto hecho en React y estilizado con TailwindCSS sobre un simulador para un sistema de administracion de clientes, con opciones de eliminar, editar y añadir nuevos clientes por medio de un formulario.',
-        link: '#',
+        link: 'https://creative-unicorn-d53737.netlify.app/',
         github: '#',
-    }
+    },
+    {
+        image: '/projects/commerce-screen.webp',
+        title: 'Practica de E-commerce con carrito',
+        tags: [TAGS.JAVASCRIPT, TAGS.CSS],
+        description: 'Proyecto hecho en React y estilizado con TailwindCSS sobre un simulador para un sistema de administracion de clientes, con opciones de eliminar, editar y añadir nuevos clientes por medio de un formulario.',
+        link: 'https://elegant-lamington-c89910.netlify.app',
+        github: '#',
+    },
+
 ]
 ---
 
 {
     
-    PROJECTS.map(({image, title, tags, description}) => (
-        <article>
-            
-
-            <h3 class="text-2xl font-semibold text-green-400 mb-2 ">{title}</h3>
-            <p class="text-lg mb-4 text-pretty"> {description}</p>
+    PROJECTS.map(({image, title, tags, description, link}) => (
+        <article class=" text-pretty pb-24">
+            <h3 class="text-2xl font-semibold text-green-400 mb-2 "> <a href={link}>{title}</a> </h3>
+            <p class="text-lg mb-4 text-pretty"> {description} </p>
 
             <ul class="flex gap-x-2 flex-row mb-2">
                 {
                     tags.map(tag => (
                         <li>
-                        <span class={`flex gap-x-2 rounded-full text-xs  ${tag.class} py-1 px-2`}>
+                        <span class={`flex gap-x-2 rounded-full text-xs  ${tag.class} py-1 px-2 pb-2`}>
                             
                         <tag.icon class="size-4" />
                         {tag.name}
