@@ -7,6 +7,7 @@ import JavascriptIcon from '../components/icons/JavascriptIcon.astro'
 import AstroIcon from '../components/icons/AstroIcon.astro'
 import NextIcon from '../components/icons/NextIcon.astro'
 import CIcon from '../components/icons/CIcon.astro'
+import WorpressIcon from '../components/icons/WordpressIcon.astro'
 
 const TAGS = {
     REACT: {
@@ -48,6 +49,11 @@ const TAGS = {
         name: 'C',
         class: 'bg-[#4a5aed] text-white',
         icon: CIcon
+    },
+    WORDPRESS: {
+        name: 'Wordpress',
+        class: 'bg-[#4aace0] text-white',
+        icon: WorpressIcon
     }
 }
 
@@ -59,7 +65,7 @@ const TECH = [TAGS.REACT, TAGS.TAILWIND, TAGS.STYLED, TAGS.CSS, TAGS.JAVASCRIPT,
 
 
 {
-<ul class="flex gap-x-2 flex-row mb-2">
+<ul class="flex gap-x-2 flex-row mb-2 flex-wrap gap-y-2 px-[100px]">
     {
         TECH.map(tag => (
             <li>
