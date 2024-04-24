@@ -14,6 +14,7 @@ import Experience from '../components/Experience.astro'
 import SectionContainer from '../components/SectionContainer.astro'
 import Projects from '../components/Projects.astro'
 import Tecnologias from '../components/Tecnologias.astro'
+import Projects2 from '../components/Projects2.astro';
 
 ---
 
@@ -21,15 +22,15 @@ import Tecnologias from '../components/Tecnologias.astro'
 	description="Portafolio de Diego Enciso."
 >
 	<main class="px-4">
-		<SectionContainer  class="py-40 pb-[12rem] flex">
-			 <div class="self-center mr-6">
+		<SectionContainer  class="py-40 pb-[12rem] flex ">
+			 <div class="self-center">
 				<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-8">Hola! Soy Diego Enciso.</h1>
 				<h2 class="text-xl lg:text-2xl  text-wrap max-w-[700px]" >
 				 <span class="text-green-400">Desarrollador Web y Estudiante de Ingeniería Informática. </span>
 				 <span class="opacity-80">Experiencia con proyectos personales y para empresas.
 				 Buscando siempre aprender más y marcar mi camino como programador. </span>	
 				</h2>
-				<nav class="flex gap-4 mt-8 flex-wrap">
+				<nav class="flex gap-4 mt-8 ">
 					<SocialPill href="https://www.linkedin.com/in/diego-enciso-b72183232/">
 						<LinkedInIcon class="size-4 md:size-6"/>
 							LinkedIn</a>
@@ -72,13 +73,15 @@ import Tecnologias from '../components/Tecnologias.astro'
 			
 		</SectionContainer>
 
+		
+
 		<SectionContainer id="proyectos"  class="pb-24">
 			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center justify-center lg:justify-normal">
 				<ProjectIcon class="size-7"/>
 				Proyectos
 			</h2>
 
-			<Projects />
+			<Projects2 />
 			
 		</SectionContainer>
 		

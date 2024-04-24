@@ -4,6 +4,11 @@ import ExperienceItem from "./ExperienceItem.astro"
 
 const EXPERIENCE = [
     {
+        title: 'Desarrollo Ecommerce - DermaX',
+        description: 'Desarrollo de un Ecommerce para la empresa DermaX. (www.dermax.com.py)'/*Mejorar descripciones*/ ,
+        
+    },
+    {
         title: 'Desarollo web - CasaDeco',
         description: 'Pagina web para un catálogo de productos de la empresa Casadeco. (www.casadeco.com.py)',
         
@@ -15,15 +20,17 @@ const EXPERIENCE = [
 ]
 ---
 
-<ol class="relative border-s border-gray-200 lg:ml-3 w-[75%] mx-auto">      
+    <ol class="relative border-s border-gray-200 lg:ml-3 w-[75%] mx-auto">    
+    
     {
         EXPERIENCE.map((experience) => (
+        
             <li class="mb-10 ms-4">
                 <ExperienceItem {...experience}/>
             </li>
         ))
     }            
     
-</ol>
+    </ol>
 
-
+ 
