@@ -8,22 +8,28 @@ import AstroIcon from '../components/icons/AstroIcon.astro'
 import NextIcon from '../components/icons/NextIcon.astro'
 import CIcon from '../components/icons/CIcon.astro'
 import WorpressIcon from '../components/icons/WordpressIcon.astro'
-
+import PhpIcon from '../components/icons/php.astro'
+import PythonIcon from '../components/icons/Python.astro'
 const TAGS = {
     REACT: {
         name: 'React JS',
         class: 'bg-sky-700 text-white',
         icon: ReactIcon
     },
+    PHP: {
+        name: 'PHP',
+        class: 'bg-[#8993be] text-white',
+        icon: PhpIcon
+    },
+    Python: {
+        name: 'Python',
+        class: 'bg-[#646464] text-white',
+        icon: PythonIcon
+    },
     TAILWIND: {
         name: 'Tailwind CSS',
         class: 'bg-[#003159] text-white',
         icon: TailwindIcon
-    },
-    STYLED: {
-        name: 'Styled Components',
-        class: 'bg-red-900 text-white',
-        icon: StyledComponentsIcon
     },
     CSS: {
         name: 'CSS',
@@ -57,7 +63,7 @@ const TAGS = {
     }
 }
 
-const TECH = [TAGS.REACT, TAGS.TAILWIND, TAGS.STYLED, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.ASTRO, TAGS.NEXT, TAGS.C]
+const TECH = [TAGS.REACT, TAGS.PHP, TAGS.TAILWIND, TAGS.Python, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.ASTRO, TAGS.NEXT, TAGS.C]
     
 
 ---
@@ -70,7 +76,7 @@ const TECH = [TAGS.REACT, TAGS.TAILWIND, TAGS.STYLED, TAGS.CSS, TAGS.JAVASCRIPT,
         TECH.map(tag => (
             <li>
             <span class={`flex gap-x-2 rounded-full text-base  ${tag.class} py-1 px-3 pb-1`}>
-                
+               
             <tag.icon class="size-5" />
             {tag.name}
             </li>
